@@ -43,7 +43,7 @@ public class BoardController {
 	@RequestMapping("/board/insertBoard.do")
 	public String insertBoard(BoardDto board, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception{
 		boardService.insertBoard(board, multipartHttpServletRequest);
-		return "redirect:/board/openBoardList.do";
+		return "redirect:board/openBoardList.do";
 	}
 	
 	@RequestMapping("/board/openBoardDetail.do")
@@ -59,13 +59,13 @@ public class BoardController {
 	@RequestMapping("/board/updateBoard.do")
 	public String updateBoard(BoardDto board) throws Exception{
 		boardService.updateBoard(board);
-		return "redirect:/board/openBoardList.do";
+		return "redirect:board/openBoardList.do";
 	}
 	
 	@RequestMapping("/board/deleteBoard.do")
 	public String deleteBoard(int boardIdx) throws Exception{
 		boardService.deleteBoard(boardIdx);
-		return "redirect:/board/openBoardList.do";
+		return "redirect:board/openBoardList.do";
 	}
 	
 	@RequestMapping("/board/downloadBoardFile.do")
